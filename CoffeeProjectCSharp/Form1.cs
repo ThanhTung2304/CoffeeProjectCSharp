@@ -33,18 +33,15 @@ namespace CoffeeProjectCSharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Kiểm tra kết nối database
             txtPassword.UseSystemPasswordChar = true;
             chbShowPassword.Checked = false;
+            txtPassword.MaxLength = 50;
 
-            // Kiểm tra kết nối DB
             if (!DangNhap.TestConnection())
             {
-                MessageBox.Show(
-                    "Không thể kết nối đến database!",
-                    "Lỗi",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
+                MessageBox.Show("Không thể kết nối đến database!",
+                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
