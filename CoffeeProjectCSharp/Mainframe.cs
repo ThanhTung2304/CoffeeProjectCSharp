@@ -35,5 +35,44 @@ namespace CoffeeProjectCSharp
             account.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EmployeeForm emp = new EmployeeForm();
+
+            emp.FormClosed += (s, args) =>
+            {
+                this.Show();
+            };
+
+            emp.Show();
+            this.Hide();
+        }
+
+        private void btnCaLam_Click(object sender, EventArgs e)
+        {
+            ShiftForm shiftForm = new ShiftForm();
+
+            shiftForm.FormClosed += (s, args) =>
+            {
+                this.Show();
+            };
+
+            shiftForm.Show();
+            this.Hide();
+        }
+
+        private void btnLichLam_Click(object sender, EventArgs e)
+        {
+            EmployeeShiftForm scheduleForm = new EmployeeShiftForm();
+
+            scheduleForm.FormClosed += (s, args) =>
+            {
+                this.Show();
+            };
+
+            scheduleForm.Show();
+            this.Hide();
+        }
     }
 }
