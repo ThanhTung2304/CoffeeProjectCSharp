@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.InkML;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,7 +15,7 @@ namespace CoffeeProjectCSharp
     {
 
         public static string connectionString =
-           "Data Source=TRANG-PC;Initial Catalog=QuanlyCafe;Integrated Security=True;TrustServerCertificate=True";
+           "Data Source=MSI;Initial Catalog = QuanlyCafe; Integrated Security = True; TrustServerCertificate=True";
 
 
         public DataTable DangNhap(string username, string password)

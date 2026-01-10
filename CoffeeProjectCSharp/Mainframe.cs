@@ -84,18 +84,28 @@ namespace CoffeeProjectCSharp
         private void btnLichLam_Click(object sender, EventArgs e)
         {
             EmployeeShiftForm scheduleForm = new EmployeeShiftForm();
-
-            scheduleForm.FormClosed += (s, args) =>
-            {
-                this.Show();
-            };
-
-            scheduleForm.Show();
+            scheduleForm.Show ();
+            this.Hide();
+            
         }
         private void button10_Click(object sender, EventArgs e)
         {
             Supplier supplier = new Supplier();
             supplier.Show();
+            this.Hide();
+        }
+
+        private void btnVoucher1_Click(object sender, EventArgs e)
+        {
+            Voucher voucher = new Voucher();
+            voucher.Show();
+            this.Hide();
+        }
+
+        private void btnQLBan_Click(object sender, EventArgs e)
+        {
+            QLBan qLBan = new QLBan();
+            qLBan.Show();
             this.Hide();
         }
     }

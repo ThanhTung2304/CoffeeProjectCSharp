@@ -35,19 +35,18 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLichLam = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.btnCaLam = new System.Windows.Forms.Button();
+            this.btnVoucher1 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.btnVoucher = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBan = new System.Windows.Forms.Button();
-            this.btnCaLam = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLichLam = new System.Windows.Forms.Button();
+            this.btnQLBan = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +86,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(4, 108);
+            this.button4.Location = new System.Drawing.Point(4, 144);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(211, 30);
@@ -98,7 +97,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(3, 178);
+            this.button5.Location = new System.Drawing.Point(3, 238);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(211, 30);
@@ -108,7 +107,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(4, 143);
+            this.button6.Location = new System.Drawing.Point(4, 204);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(211, 30);
@@ -122,12 +121,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.btnQLBan);
             this.panel1.Controls.Add(this.btnLichLam);
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.btnCaLam);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.btnVoucher1);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
@@ -137,12 +137,23 @@
             this.panel1.Location = new System.Drawing.Point(11, 75);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 527);
+            this.panel1.Size = new System.Drawing.Size(301, 613);
             this.panel1.TabIndex = 7;
+            // 
+            // btnLichLam
+            // 
+            this.btnLichLam.Location = new System.Drawing.Point(3, 341);
+            this.btnLichLam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLichLam.Name = "btnLichLam";
+            this.btnLichLam.Size = new System.Drawing.Size(211, 30);
+            this.btnLichLam.TabIndex = 12;
+            this.btnLichLam.Text = "QUẢN LÝ LỊCH LÀM";
+            this.btnLichLam.UseVisualStyleBackColor = true;
+            this.btnLichLam.Click += new System.EventHandler(this.btnLichLam_Click);
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(3, 358);
+            this.btnThongKe.Location = new System.Drawing.Point(3, 411);
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(211, 30);
@@ -153,7 +164,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(4, 321);
+            this.button10.Location = new System.Drawing.Point(4, 376);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(211, 30);
@@ -164,24 +175,18 @@
             // 
             // button9
             // 
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button9.Location = new System.Drawing.Point(3, 443);
+            this.button9.Location = new System.Drawing.Point(3, 447);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(211, 30);
+            this.button9.Size = new System.Drawing.Size(211, 34);
             this.button9.TabIndex = 9;
             this.button9.Text = "ĐĂNG XUẤT";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // btnCaLam
             // 
-            this.button8.Location = new System.Drawing.Point(4, 349);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(237, 38);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "QUẢN LÝ HÓA ĐƠN";
-            this.button8.UseVisualStyleBackColor = true;
-            this.btnCaLam.Location = new System.Drawing.Point(4, 249);
+            this.btnCaLam.Location = new System.Drawing.Point(4, 306);
             this.btnCaLam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCaLam.Name = "btnCaLam";
             this.btnCaLam.Size = new System.Drawing.Size(211, 30);
@@ -189,6 +194,26 @@
             this.btnCaLam.Text = "QUẢN LÝ CA LÀM";
             this.btnCaLam.UseVisualStyleBackColor = true;
             this.btnCaLam.Click += new System.EventHandler(this.btnCaLam_Click);
+            // 
+            // btnVoucher1
+            // 
+            this.btnVoucher1.Location = new System.Drawing.Point(4, 272);
+            this.btnVoucher1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVoucher1.Name = "btnVoucher1";
+            this.btnVoucher1.Size = new System.Drawing.Size(211, 30);
+            this.btnVoucher1.TabIndex = 7;
+            this.btnVoucher1.Text = "VOUCHER";
+            this.btnVoucher1.UseVisualStyleBackColor = true;
+            this.btnVoucher1.Click += new System.EventHandler(this.btnVoucher1_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(4, 349);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(237, 38);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "QUẢN LÝ HÓA ĐƠN";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // btnVoucher
             // 
@@ -199,13 +224,6 @@
             this.btnVoucher.Text = "VOUCHER";
             this.btnVoucher.UseVisualStyleBackColor = true;
             this.btnVoucher.Click += new System.EventHandler(this.btnVoucher_Click);
-            this.button7.Location = new System.Drawing.Point(4, 214);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(211, 30);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "VOUCHER";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -213,7 +231,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(251, 29);
+            this.label1.Location = new System.Drawing.Point(280, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(415, 31);
             this.label1.TabIndex = 9;
@@ -228,7 +246,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(233, 75);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(685, 393);
+            this.pictureBox1.Size = new System.Drawing.Size(742, 479);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -242,22 +260,23 @@
             this.btnBan.Text = "QUẢN LÝ BÀN";
             this.btnBan.UseVisualStyleBackColor = true;
             this.btnBan.Click += new System.EventHandler(this.btnBan_Click);
-            // btnLichLam
             // 
-            this.btnLichLam.Location = new System.Drawing.Point(3, 285);
-            this.btnLichLam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLichLam.Name = "btnLichLam";
-            this.btnLichLam.Size = new System.Drawing.Size(211, 30);
-            this.btnLichLam.TabIndex = 12;
-            this.btnLichLam.Text = "QUẢN LÝ LỊCH LÀM";
-            this.btnLichLam.UseVisualStyleBackColor = true;
-            this.btnLichLam.Click += new System.EventHandler(this.btnLichLam_Click);
+            // btnQLBan
+            // 
+            this.btnQLBan.Location = new System.Drawing.Point(2, 109);
+            this.btnQLBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQLBan.Name = "btnQLBan";
+            this.btnQLBan.Size = new System.Drawing.Size(211, 30);
+            this.btnQLBan.TabIndex = 13;
+            this.btnQLBan.Text = "QUẢN LÝ BÀN";
+            this.btnQLBan.UseVisualStyleBackColor = true;
+            this.btnQLBan.Click += new System.EventHandler(this.btnQLBan_Click);
             // 
             // Mainframe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 522);
+            this.ClientSize = new System.Drawing.Size(986, 608);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -283,7 +302,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnVoucher;
         private System.Windows.Forms.Button btnCaLam;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnVoucher1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnThongKe;
@@ -291,5 +310,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBan;
         private System.Windows.Forms.Button btnLichLam;
+        private System.Windows.Forms.Button btnQLBan;
     }
 }
