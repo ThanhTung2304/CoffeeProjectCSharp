@@ -26,9 +26,17 @@ namespace CoffeeProjectCSharp
         public Account()
         {
             InitializeComponent();
+
+
+            this.WindowState = FormWindowState.Maximized; // mở full màn hình
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+       
+
+
             SetInterface("Reset");
             GetData();
         }
+
 
         private void SetInterface(string status)
         {
@@ -173,7 +181,11 @@ namespace CoffeeProjectCSharp
             }
 
             DialogResult result = MessageBox.Show(
+
                 "Bạn có chắc chắn muốn xóa sinh viên này không?",
+
+                "Bạn có chắc chắn muốn tài khoản này không?",
+
                 "Xác nhận xóa",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
@@ -192,12 +204,20 @@ namespace CoffeeProjectCSharp
                         int rows = cmd.ExecuteNonQuery();
                         if (rows > 0)
                         {
+
                             MessageBox.Show("Xóa sinh viên thành công");
+
+                            MessageBox.Show("Xóa tài khoản thành công");
+
                             GetData();
                         }
                         else
                         {
+
                             MessageBox.Show("Không tìm thấy sinh viên để xóa");
+
+                            MessageBox.Show("Không tìm thấy tài khoản để xóa");
+
                         }
                     }
                 }
@@ -326,6 +346,7 @@ namespace CoffeeProjectCSharp
             }
         }
 
+
         private void button8_Click(object sender, EventArgs e)
         {
 
@@ -353,6 +374,13 @@ namespace CoffeeProjectCSharp
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Supplier supplier = new Supplier();
+            supplier.Show();
+            this.Hide();
 
         }
     }
