@@ -1,6 +1,6 @@
 # Visual Studio
 .vs/
-**/.vs/
+
 
 # Build output
 bin/
@@ -10,3 +10,5 @@ obj/
 *.user
 *.suo
 
+# NuGet
+packages/
