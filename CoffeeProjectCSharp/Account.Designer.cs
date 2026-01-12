@@ -74,6 +74,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -558,11 +559,23 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // btnExcel
+            // 
+            this.btnExcel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnExcel.Location = new System.Drawing.Point(898, 364);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(115, 43);
+            this.btnExcel.TabIndex = 55;
+            this.btnExcel.Text = "Xuất Excel";
+            this.btnExcel.UseVisualStyleBackColor = false;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1392, 795);
+            this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtPassword);
@@ -646,5 +659,6 @@
         private System.Windows.Forms.Button btnBan;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnExcel;
     }
 }
