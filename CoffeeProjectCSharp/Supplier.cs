@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using ClosedXML.Excel;
+
 
 namespace CoffeeProjectCSharp
 {
@@ -315,6 +318,63 @@ namespace CoffeeProjectCSharp
 
                 dgvSupplier.AutoGenerateColumns = true;
                 dgvSupplier.DataSource = dt;
+            }
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if (dgvSupplier.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu để xuất!");
+                return;
+            }
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Files|*.xlsx";
+            sfd.Title = "Lưu file Excel";
+            sfd.FileName = "DanhSachNhaCungCap.xlsx";
+
+            if (sfd.ShowDialog() != DialogResult.OK)
+                return;
+
+            try
+            {
+                using (XLWorkbook wb = new XLWorkbook())
+                {
+                    var ws = wb.Worksheets.Add("Nhà cung cấp");
+
+                    // ===== HEADER =====
+                    for (int i = 0; i < dgvSupplier.Columns.Count; i++)
+                    {
+                        ws.Cell(1, i + 1).Value = dgvSupplier.Columns[i].HeaderText;
+                        ws.Cell(1, i + 1).Style.Font.Bold = true;
+                    }
+
+                    // ===== DATA =====
+                    for (int i = 0; i < dgvSupplier.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dgvSupplier.Columns.Count; j++)
+                        {
+                            ws.Cell(i + 2, j + 1).Value =
+                                dgvSupplier.Rows[i].Cells[j].Value?.ToString();
+                        }
+                    }
+
+                    ws.Columns().AdjustToContents();
+                    wb.SaveAs(sfd.FileName);
+                }
+
+                //Process.Start(new ProcessStartInfo
+                //{
+                //    FileName = sfd.FileName,
+                //    UseShellExecute = true
+                //});
+
+                //MessageBox.Show("Xuất Excel thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xuất Excel: " + ex.Message);
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -337,6 +338,53 @@ namespace CoffeeProjectCSharp
             Supplier supplier = new Supplier();
             supplier.Show();
             this.Hide();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            if(dgvAccount.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu để xuất ra Excel!");
+                return;
+            }
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Workbook|*.xlsx";
+            sfd.Title = "Lưu tệp Excel";
+            sfd.FileName = "AccountData.xlsx";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+                return;
+
+
+            try
+            {
+                using(XLWorkbook workbook = new XLWorkbook())
+                {
+                    DataTable dt = new DataTable("AccountData");
+                    foreach (DataGridViewColumn column in dgvAccount.Columns)
+                    {
+                        dt.Columns.Add(column.HeaderText);
+                    }
+                    foreach (DataGridViewRow row in dgvAccount.Rows)
+                    {
+                        DataRow dataRow = dt.NewRow();
+                        for (int i = 0; i < dgvAccount.Columns.Count; i++)
+                        {
+                            dataRow[i] = row.Cells[i].Value ?? DBNull.Value;
+                        }
+                        dt.Rows.Add(dataRow);
+                    }
+                    workbook.Worksheets.Add(dt);
+                    workbook.SaveAs(sfd.FileName);
+                }
+
+                MessageBox.Show("Xuất Excel thành công!");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xuất dữ liệu ra Excel: " + ex.Message);
+            }
         }
     }
 }
