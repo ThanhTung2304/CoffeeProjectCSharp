@@ -30,15 +30,16 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnQLHD = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -65,15 +66,15 @@
             this.button2.Text = "QUẢN LÝ NHÂN VIÊN";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCustomer
             // 
-            this.button3.Location = new System.Drawing.Point(4, 91);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(237, 38);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "QUẢN LÝ KHÁCH HÀNG";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCustomer.Location = new System.Drawing.Point(4, 91);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(237, 38);
+            this.btnCustomer.TabIndex = 2;
+            this.btnCustomer.Text = "QUẢN LÝ KHÁCH HÀNG";
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -86,7 +87,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(3, 223);
+            this.button5.Location = new System.Drawing.Point(3, 267);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(237, 38);
             this.button5.TabIndex = 4;
@@ -95,7 +96,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(4, 179);
+            this.button6.Location = new System.Drawing.Point(4, 223);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(237, 38);
             this.button6.TabIndex = 6;
@@ -105,25 +106,36 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.btnQLHD);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(12, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(244, 491);
+            this.panel1.Size = new System.Drawing.Size(244, 542);
             this.panel1.TabIndex = 7;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Location = new System.Drawing.Point(2, 179);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(237, 38);
+            this.btnMenu.TabIndex = 12;
+            this.btnMenu.Text = "MENU";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(3, 399);
+            this.btnThongKe.Location = new System.Drawing.Point(3, 436);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(237, 38);
             this.btnThongKe.TabIndex = 11;
@@ -133,7 +145,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(4, 355);
+            this.button10.Location = new System.Drawing.Point(4, 393);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(237, 38);
             this.button10.TabIndex = 10;
@@ -142,25 +154,26 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(3, 443);
+            this.button9.Location = new System.Drawing.Point(3, 479);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(237, 38);
             this.button9.TabIndex = 9;
             this.button9.Text = "ĐĂNG XUẤT";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnQLHD
             // 
-            this.button8.Location = new System.Drawing.Point(4, 311);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(237, 38);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "QUẢN LÝ HÓA ĐƠN";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnQLHD.Location = new System.Drawing.Point(4, 352);
+            this.btnQLHD.Name = "btnQLHD";
+            this.btnQLHD.Size = new System.Drawing.Size(237, 38);
+            this.btnQLHD.TabIndex = 8;
+            this.btnQLHD.Text = "QUẢN LÝ HÓA ĐƠN";
+            this.btnQLHD.UseVisualStyleBackColor = true;
+            this.btnQLHD.Click += new System.EventHandler(this.btnQLHD_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(4, 267);
+            this.button7.Location = new System.Drawing.Point(4, 310);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(237, 38);
             this.button7.TabIndex = 7;
@@ -192,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 621);
+            this.ClientSize = new System.Drawing.Size(1045, 675);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -209,17 +222,18 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnQLHD;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnMenu;
     }
 }

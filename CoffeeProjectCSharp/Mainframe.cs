@@ -17,8 +17,11 @@ namespace CoffeeProjectCSharp
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)      //quản lí khách hàng
         {
+            Customer customer = new Customer();
+            customer.Show();
+            this.Hide();
 
         }
 
@@ -33,6 +36,20 @@ namespace CoffeeProjectCSharp
         {
             Account account = new Account();
             account.Show();
+            this.Hide();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void btnQLHD_Click(object sender, EventArgs e)
+        {
+            QLHoaDon qLHoaDon = new QLHoaDon();
+            qLHoaDon.Show();
             this.Hide();
         }
     }
